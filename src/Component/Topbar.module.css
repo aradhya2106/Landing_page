@@ -1,0 +1,43 @@
+.topbarContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 2.5rem;
+  margin-top: 0;
+}
+
+.topbarHeader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.topbarDiv {
+  width: 100%;
+  max-width: 112rem; /* max-w-7xl */
+  position: relative;
+}
+
+.mainNav {
+  transition: all 0.3s;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  background-color: rgba(19, 20, 45, 0.95);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.navbarInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Additional styles for other elements can be added here */
