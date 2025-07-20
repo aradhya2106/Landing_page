@@ -2,18 +2,10 @@
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
-     "./Component/**/*.{js,ts,jsx,tsx}",
-    // if using `app/` dir (Next.js 13+)
+    "./components/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}"
   ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-// tailwind.config.js
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"], // adjust this to your folder structure
   theme: {
     extend: {
       textShadow: {
@@ -24,12 +16,12 @@ module.exports = {
       },
       keyframes: {
         glow: {
-          '0%, 100%': { textShadow: '0 0 4px #ffffff, 0 0 8px #7f00ff, 0 0 12px #7f00ff' },
+          '0%, 100%': {
+            textShadow: '0 0 4px #ffffff, 0 0 8px #7f00ff, 0 0 12px #7f00ff',
+          },
         },
       },
     },
   },
-  plugins: [
-    require('tailwindcss-textshadow'),
-  ],
+  plugins: [require('tailwindcss-textshadow')],
 };

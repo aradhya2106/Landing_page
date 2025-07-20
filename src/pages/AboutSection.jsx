@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import WhoWeAre from "../Assets/WhoWeAre.png"
+import GradientGlowText from '@/Component/Typography/Heading';
 
 const AboutSection = () => {
   return (
@@ -10,9 +11,11 @@ const AboutSection = () => {
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between z-10 relative">
         
         <div className="lg:w-1/2 space-y-6 text-center lg:text-left mb-10 lg:mb-0">
+        <GradientGlowText>
           <h2 className="text-5xl md:text-6xl font-bold text-white/20 uppercase tracking-widest leading-none">
             WHO WE ARE?
           </h2>
+          </GradientGlowText>
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
             Built To Launch,{' '}
             <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-transparent bg-clip-text">
