@@ -2,7 +2,7 @@
 
 import React, { useCallback, useEffect, useState, useMemo } from "react";
 import Image from "next/image";
-import gtmlogonew from "../assets/gtmlogonew.png";
+import gtmlogonew from "../Assets/gtmlogonew.png";
 import { Button } from "../Component/Button/Button.jsx";
 import { Typography } from "../Component/Typography/Typography.jsx";
 
