@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import OurAdvantages from "./OurAdvantages";
 import AboutSection from "./AboutSection";
+import TeamSection from "./TeamSection";
 import PartnersAndPlatforms from "./PartnersSection";
 
 const TopBar = dynamic(() => import("./Topbar"), {
@@ -19,6 +20,7 @@ export default function Home() {
       <HeroBanner />
       <OurAdvantages/>
       <AboutSection/>
+      <TeamSection/>
       <PartnersAndPlatforms/>
     </div>
   );

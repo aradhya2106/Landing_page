@@ -5,6 +5,7 @@ import internet from "../Assets/internet.png";
 import Peoples from "../Assets/Peoples.png";
 import Rocket from "../Assets/Rocket.png";
 import Circle from "../Assets/Circle.png";
+
 export default function OurAdvantages() {
   const advantages = useMemo(
     () => [
@@ -39,6 +40,7 @@ export default function OurAdvantages() {
     ],
     []
   );
+
   const leftColumn = useMemo(
     () => [advantages[0], advantages[2]],
     [advantages]
@@ -47,6 +49,7 @@ export default function OurAdvantages() {
     () => [advantages[1], advantages[3]],
     [advantages]
   );
+
   const titleChars = useMemo(
     () =>
       "OUR ADVANTAGES".split("").map((char, i) => (
@@ -59,8 +62,9 @@ export default function OurAdvantages() {
       )),
     []
   );
+
   return (
-    <section className="bg-[#0B0B0B] text-white py-20 px-6 text-center">
+    <section className="bg-black text-white py-20 px-6 text-center">
       <h2 className="flex justify-center flex-wrap gap-1 text-xl sm:text-2xl md:text-5xl lg:text-6xl font-black mb-6 tracking-widest">
         {titleChars}
       </h2>
@@ -104,3 +108,4 @@ export default function OurAdvantages() {
     </section>
   );
 }
+    
