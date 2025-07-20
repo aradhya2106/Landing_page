@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import OurAdvantages from "./OurAdvantages";
 import AboutSection from "./AboutSection";
 import TeamSection from "./TeamSection";
+import PartnersAndPlatforms from "./PartnersSection";
 
 const TopBar = dynamic(() => import("./Topbar"), {
   loading: () => <div className="h-20 bg-black" />,
@@ -40,6 +41,7 @@ export default function Home() {
       <div id="smart-solutions">
         <SmartSolutions />
       </div>
+      <PartnersAndPlatforms/>
     </div>
   );
 }
