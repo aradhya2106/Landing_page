@@ -98,5 +98,5 @@ const ServiceSection = () => {
     </section>
   );
 };
-
 export default ServiceSection;
+
