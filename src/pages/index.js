@@ -4,6 +4,7 @@ import OurAdvantages from "./OurAdvantages";
 import AboutSection from "./AboutSection";
 import TeamSection from "./TeamSection";
 import PartnersAndPlatforms from "./PartnersSection";
+import ClientTestimonials from "./Testimonial";
 
 const TopBar = dynamic(() => import("./Topbar"), {
   loading: () => <div className="h-20 bg-black" />,
@@ -33,7 +34,6 @@ export default function Home() {
       <HeroBanner />
       <OurAdvantages />
       <AboutSection />
-      <TeamSection />
       <Navigation />
       <div id="service-packages">
         <ServicePackages />
@@ -42,6 +42,8 @@ export default function Home() {
         <SmartSolutions />
       </div>
       <PartnersAndPlatforms/>
+      <ClientTestimonials/>
+      <TeamSection />
     </div>
   );
 }
