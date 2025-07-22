@@ -64,7 +64,7 @@ export default function OurAdvantages() {
   );
 
   return (
-    <section className="bg-black text-white py-20 px-6 text-center">
+    <section id="OurAdvantages" className="bg-black text-white py-20 px-6 text-center">
       <h2 className="flex justify-center flex-wrap gap-1 text-xl sm:text-2xl md:text-5xl lg:text-6xl font-black mb-6 tracking-widest">
         {titleChars}
       </h2>

@@ -5,7 +5,7 @@ import GradientButton from '@/Component/GradientButton/GradientButton';
 
 const AboutSection = () => {
   return (
-    <section className="relative bg-black text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
+    <section id="About" className="relative bg-black text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
       
       <div className="absolute top-1/2 left-0 w-full h-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-3xl opacity-30 pointer-events-none -translate-y-1/2"></div>
 
