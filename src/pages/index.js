@@ -4,10 +4,9 @@ import OurAdvantages from "./OurAdvantages";
 import AboutSection from "./AboutSection";
 import TeamSection from "./TeamSection";
 import PartnersAndPlatforms from "./PartnersSection";
+import Footer from "./Footer";
 import ClientTestimonials from "./Testimonial";
-
 import ServiceSection from "../Component/ServiceContainer/ServiceSection.jsx";
-
 
 const TopBar = dynamic(() => import("./Topbar"), {
   loading: () => <div className="h-20 bg-black" />,
@@ -38,19 +37,24 @@ export default function Home() {
       <OurAdvantages />
       <AboutSection />
       <Navigation />
-      <div id="service-packages">
+      
+      <div id="Packages">
         <ServicePackages />
       </div>
      
       <div id="smart-solutions">
         <SmartSolutions />
       </div>
-      <PartnersAndPlatforms/>
-      <ClientTestimonials/>
+
+      <PartnersAndPlatforms />
+      <ClientTestimonials />
       <TeamSection />
-  <main>
-      <ServiceSection />
-    </main>
+      
+      <main>
+        <ServiceSection />
+      </main>
+
+      <Footer />
     </div>
   );
 }

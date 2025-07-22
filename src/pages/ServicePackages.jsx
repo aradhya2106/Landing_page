@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import GradientGlowText from '@/Component/Typography/Heading';
 
 
 const ServicePackages = () => {
@@ -50,21 +51,13 @@ const ServicePackages = () => {
       <div className="relative z-10 container mx-auto px-4 py-16 lg:py-24">
         {/* Main Title */}
         <div className="text-center mb-20">
-          <h1 className="text-3xl sm:text-3xl md:text-6xl lg:text-7xl font-bold text-gray-600 mb-11 cursor-pointer whitespace-nowrap overflow-hidden">
-            {Array.from("SERVICE PACKAGES").map((letter, index) => (
-              <span
-                key={index}
-                className={`inline-block gradient-text-hover text-gray-600 ${
-                  letter === ' ' ? 'mx-1 sm:mx-2' : ''
-                }`}
-                style={{
-                  transitionDelay: `${index * 15}ms`
-                }}
-              >
-                {letter}
-              </span>
-            ))}
-          </h1>
+          <GradientGlowText
+            className="text-3xl sm:text-3xl md:text-6xl lg:text-7xl font-bold text-gray-600 mb-11 cursor-pointer whitespace-nowrap overflow-hidden"
+            circleSize={120}
+            baseTextColor="text-gray-600"
+          >
+            SERVICE PACKAGES
+          </GradientGlowText>
           
           {/* Subtitle */}
           <h2 className="text-2xl md:text-3xl lg:text-5xl font-sora text-white mb-4">
@@ -83,9 +76,7 @@ const ServicePackages = () => {
           {packages.map((pkg, index) => (
             <div
               key={pkg.id}
-              className={`relative group transition-all duration-500 transform hover:scale-105 ${
-                hoveredCard === pkg.id ? 'scale-105' : ''
-              }`}
+             className="relative group transition-all duration-500 transform hover:scale-105"
               onMouseEnter={() => setHoveredCard(pkg.id)}
               onMouseLeave={() => setHoveredCard(null)}
             >
@@ -104,11 +95,11 @@ const ServicePackages = () => {
                 {/* Card Content */}
                 <div className="text-center">
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-white mb-4">{pkg.title}</h3>
+                  <h3 className="text-2xl font-light text-white mb-4 font-sora">{pkg.title}</h3>
                   
                   {/* Price */}
                   <div className="mb-6 md:mb-8">
-                    <span className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                    <span className="text-2xl md:text-3xl lg:text-3xl font-bold text-white font-sora">
                       {pkg.price}
                     </span>
                   </div>
@@ -133,17 +124,21 @@ const ServicePackages = () => {
                     ))}
                   </ul>
 
-                  {/* CTA Button */}
-                  <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-                    Schedule a call
-                  </button>
+                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-xl transition-opacity duration-300 ${
+                  hoveredCard === pkg.id ? 'opacity-100' : 'opacity-0'
+                }`}></div>
+                {/* CTA Button - ABSOLUTELY BULLETPROOF */}
+                <a
+                  href="https://calendly.com/gtmlabsxyz/consult"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full block text-center bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 mt-4 relative z-10 font-sora"
+                  tabIndex={0}
+                >
+                  Schedule a call
+                </a>
                 </div>
               </div>
-
-              {/* Glow Effect */}
-              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-xl transition-opacity duration-300 ${
-                hoveredCard === pkg.id ? 'opacity-100' : 'opacity-0'
-              }`}></div>
             </div>
           ))}
         </div>
