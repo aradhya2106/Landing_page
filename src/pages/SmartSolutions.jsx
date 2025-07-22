@@ -41,14 +41,14 @@ const SmartSolutions = () => {
               Trusted Team
             </span>
           </h1>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-sora text-white mb-8">
+           <h2 className="text-3xl md:text-4xl lg:text-5xl font-sora text-white mb-2">
             Built to Grow Your Business
           </h2>
         </div>
 
         {/* Description Paragraph */}
-        <div className="max-w-4xl mx-auto text-center mb-10">
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+        <div className="max-w-4xl mx-auto text-center mb-13">
+                   <p className="text-base md:text-lg text-gray-300 leading-relaxed font-extralight font-sora -mt-12">
             Unlike generic AI tools, our solutions are custom-built to fit your workflows seamlessly 
             integrating with your current systems without disrupting operations. Whether it's automation, 
             smarter customer engagement, or enterprise-grade security, we deliver real results minus the complexity.
@@ -72,7 +72,7 @@ const SmartSolutions = () => {
                   </span>
                 )}
               </div>
-              <p className="text-sm md:text-base text-white leading-relaxed">
+              <p className="text-sm md:text-base text-white leading-relaxed font-thin font-sora">
                 {stat.description}
               </p>
             </div>
@@ -81,13 +81,15 @@ const SmartSolutions = () => {
 
         {/* CTA Button */}
         <div className="text-center">
-          <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-2xl text-lg md:text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-            Talk to Expert
-          </button>
+          <a href="https://calendly.com/gtmlabsxyz/consult" target="_blank" rel="noopener noreferrer">
+            <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-black font-semibold py-4 px-8 rounded-2xl text-lg md:text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+              Talk to Expert
+            </button>
+          </a>
         </div>
       </div>
     </section>
   );
 };
 
-export default SmartSolutions; 
+export default SmartSolutions;
