@@ -33,30 +33,7 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  return (
-    <div className="fixed top-1/2 right-6 transform -translate-y-1/2 z-50 hidden lg:block">
-      <div className="flex flex-col space-y-4">
-        <button
-          onClick={() => scrollToSection('service-packages')}
-          className={`w-3 h-3 rounded-full transition-all duration-300 ${
-            activeSection === 'packages'
-              ? 'bg-gradient-to-r from-purple-500 to-blue-500 scale-125'
-              : 'bg-gray-600 hover:bg-gray-400'
-          }`}
-          title="Service Packages"
-        />
-        <button
-          onClick={() => scrollToSection('smart-solutions')}
-          className={`w-3 h-3 rounded-full transition-all duration-300 ${
-            activeSection === 'solutions'
-              ? 'bg-gradient-to-r from-purple-500 to-blue-500 scale-125'
-              : 'bg-gray-600 hover:bg-gray-400'
-          }`}
-          title="Smart Solutions"
-        />
-      </div>
-    </div>
-  );
+  return null;
 };
 
 export default Navigation; 
