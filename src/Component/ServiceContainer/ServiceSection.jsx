@@ -1,4 +1,3 @@
-
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -32,7 +31,6 @@ const ServiceSection = () => {
               key={index}
               className="relative bg-black border-[10px] md:border-[17px] border-[#2b2b2b] rounded-[7px] p-6 md:p-10 shadow-[0_0_30px_#0ff3ff22] hover:shadow-blue-500/40 transition duration-300"
             >
-            
               <div className="absolute top-0 left-6 transform -translate-y-1/2 z-10">
                 <Image
                   src={Lamp}
@@ -43,9 +41,7 @@ const ServiceSection = () => {
                 />
               </div>
 
-        
               <div className="grid md:grid-cols-[1fr_80px_1fr] grid-cols-1 gap-6 z-10 relative mt-6">
-             
                 <div>
                   <h3 className="text-xl font-extrabold uppercase tracking-wide mb-1">
                     <span
@@ -73,7 +69,6 @@ const ServiceSection = () => {
                   </p>
                 </div>
 
-
                 <div className="flex justify-center items-center">
                   <div className="p-4 bg-gradient-to-br from-purple-700 to-blue-500 rounded-xl shadow-lg shadow-blue-500/30">
                     <Icon size={32} />
@@ -99,4 +94,3 @@ const ServiceSection = () => {
   );
 };
 export default ServiceSection;
-
