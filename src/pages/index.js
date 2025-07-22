@@ -5,6 +5,7 @@ import AboutSection from "./AboutSection";
 import TeamSection from "./TeamSection";
 import PartnersAndPlatforms from "./PartnersSection";
 import ClientTestimonials from "./Testimonial";
+import ContactUsSection from "./ContactForm";
 
 const TopBar = dynamic(() => import("./Topbar"), {
   loading: () => <div className="h-20 bg-black" />,
@@ -44,6 +45,7 @@ export default function Home() {
       <PartnersAndPlatforms/>
       <ClientTestimonials/>
       <TeamSection />
+      <ContactUsSection/>
     </div>
   );
 }
