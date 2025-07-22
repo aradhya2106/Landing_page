@@ -37,11 +37,11 @@ export default function Home() {
       <OurAdvantages />
       <AboutSection />
       <Navigation />
-      
+
       <div id="Packages">
         <ServicePackages />
       </div>
-     
+
       <div id="smart-solutions">
         <SmartSolutions />
       </div>
@@ -49,7 +49,7 @@ export default function Home() {
       <PartnersAndPlatforms />
       <ClientTestimonials />
       <TeamSection />
-      
+
       <main>
         <ServiceSection />
       </main>
