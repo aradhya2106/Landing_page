@@ -38,6 +38,9 @@ export default function Home() {
       <OurAdvantages />
       <AboutSection />
       <Navigation />
+      <main id="ServiceSection">
+      <ServiceSection />
+    </main>
       <div id="service-packages">
         <ServicePackages />
       </div>
@@ -48,9 +51,7 @@ export default function Home() {
       <PartnersAndPlatforms/>
       <ClientTestimonials/>
       <TeamSection />
-  <main>
-      <ServiceSection />
-    </main>
+  
     </div>
   );
 }
