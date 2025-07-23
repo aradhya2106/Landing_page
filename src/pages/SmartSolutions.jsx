@@ -82,7 +82,7 @@ const SmartSolutions = () => {
         {/* CTA Button */}
         <div className="text-center">
           <a href="https://calendly.com/gtmlabsxyz/consult" target="_blank" rel="noopener noreferrer">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-black font-semibold py-4 px-8 rounded-2xl text-lg md:text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+            <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-black font-semibold py-4 px-8 rounded-2xl text-lg md:text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 cursor-pointer">
               Talk to Expert
             </button>
           </a>
