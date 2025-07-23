@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
         {/* Logo */}
         <div className="flex justify-center">
-          <Image src={require('../assets/gtmlogonew.png')} alt="GTM Labs Logo" width={120} height={120} className="object-contain" />
+          <Image src={require('../Assets/gtmlogonew.png')} alt="GTM Labs Logo" width={120} height={120} className="object-contain" />
         </div>
         {/* Quick Links & Policies */}
         <div className="flex flex-row justify-between gap-8">
@@ -84,7 +84,7 @@ export default function Footer() {
       <div className="hidden md:flex flex-row justify-between items-start gap-8 max-w-6xl mx-auto">
         {/* Logo */}
         <div className="flex flex-col items-center md:items-start w-[140px] flex-shrink-0">
-          <Image src={require('../assets/gtmlogonew.png')} alt="GTM Labs Logo" width={140} height={140} className="object-contain" />
+          <Image src={require('../Assets/gtmlogonew.png')} alt="GTM Labs Logo" width={140} height={140} className="object-contain" />
         </div>
         {/* Quick Links */}
         <div className="flex flex-col items-start gap-2 min-w-[120px]">
