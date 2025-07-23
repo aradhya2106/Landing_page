@@ -52,13 +52,13 @@ export const HeroBanner = () => {
         {/* Buttons */}
         <div className="flex justify-center items-center gap-6 flex-wrap mt-1">
           <Button
-            className="rounded-full h-[56px] px-10 bg-gradient-to-r from-[#8f5cff] to-[#30A0FF] text-black font-bold min-w-[180px] shadow-lg active:scale-95 transition-transform font-sora text-lg hover:shadow-[0_0_16px_0_rgba(144,97,255,0.5)] focus:shadow-[0_0_16px_0_rgba(144,97,255,0.7)]"
+            className="rounded-full h-[56px] px-10 bg-gradient-to-r from-[#8f5cff] to-[#30A0FF] text-black font-bold min-w-[180px] shadow-lg active:scale-95 transition-transform font-sora text-lg hover:shadow-[0_0_16px_0_rgba(144,97,255,0.5)] focus:shadow-[0_0_16px_0_rgba(144,97,255,0.7)] cursor-pointer"
             onClick={handleStartScaling}
             text={<span className="font-sora font-bold text-lg">Start Scaling</span>}
           />
           <div className="relative rounded-full p-[2px] bg-gradient-to-r from-[#30A0FF] to-[#B145FF]">
             <Button
-              className="rounded-full h-[56px] px-10 bg-black min-w-[180px] font-bold font-sora text-lg active:scale-95 transition-transform group hover:shadow-[0_0_16px_0_rgba(144,97,255,0.5)] focus:shadow-[0_0_16px_0_rgba(144,97,255,0.7)]"
+              className="rounded-full h-[56px] px-10 bg-black min-w-[180px] font-bold font-sora text-lg active:scale-95 transition-transform group hover:shadow-[0_0_16px_0_rgba(144,97,255,0.5)] focus:shadow-[0_0_16px_0_rgba(144,97,255,0.7)] cursor-pointer"
               onClick={handleScrollToServices}
               text={
                 <span className="font-sora font-bold text-lg bg-gradient-to-r from-[#30A0FF] to-[#B145FF] bg-clip-text text-transparent">Our Services</span>
