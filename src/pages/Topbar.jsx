@@ -17,14 +17,17 @@ const NAVBAR_INNER = "flex items-center justify-between px-4 sm:px-6 py-4";
 const TopBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const navigationItems = useMemo(() => [
-    { id: "home", label: "HOME", href: "#HeroBanner" },
-    { id: "about", label: "ABOUT", href: "#About" },
-    { id: "services", label: "SERVICES", href: "#Services" },
-    { id: "packages", label: "PACKAGES", href: "#Packages" },
-    { id: "blogs", label: "BLOGS", href: "#Blogs" },
-    { id: "contact", label: "CONTACT", href: "#Contact" },
-  ], []);
+  const navigationItems = useMemo(
+    () => [
+      { id: "home", label: "HOME", href: "#HeroBanner" },
+      { id: "about", label: "ABOUT", href: "#About" },
+      { id: "services", label: "SERVICES", href: "#ServiceSection " },
+      { id: "packages", label: "PACKAGES", href: "#Packages" },
+      { id: "blogs", label: "BLOGS", href: "#Blogs" },
+      { id: "contact", label: "CONTACT", href: "#Contact" },
+    ],
+    []
+  );
 
   const socialLinks = useMemo(() => [
     {
