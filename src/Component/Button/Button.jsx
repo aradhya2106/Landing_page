@@ -11,3 +11,4 @@ export const Button = ({ className, onClick, text, style }) => {
     </button>
   );
 };
+

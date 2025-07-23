@@ -7,6 +7,7 @@ import PartnersAndPlatforms from "./PartnersSection";
 import Footer from "./Footer";
 import ClientTestimonials from "./Testimonial";
 import ServiceSection from "../Component/ServiceContainer/ServiceSection.jsx";
+import ContactUsSection from "./ContactForm";
 
 const TopBar = dynamic(() => import("./Topbar"), {
   loading: () => <div className="h-20 bg-black" />,
@@ -53,8 +54,9 @@ export default function Home() {
       <main>
         <ServiceSection />
       </main>
-
+      <ContactUsSection/>
       <Footer />
+      
     </div>
   );
 }
