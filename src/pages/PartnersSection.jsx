@@ -37,7 +37,7 @@ const PartnersAndPlatformsSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className="max-w-6xl mx-auto mb-40">
+                <div className="max-w-6xl mx-auto mb-0">
                     <h2 className="text-4xl font-bold text-center mb-20">
                         <span
                             className="bg-gradient-to-r from-[#B145FF] to-[#30A0FF] bg-clip-text text-transparent">
