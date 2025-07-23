@@ -5,7 +5,7 @@ import internet from "../Assets/internet.png";
 import Peoples from "../Assets/Peoples.png";
 import Rocket from "../Assets/Rocket.png";
 import Circle from "../Assets/Circle.png";
-import GradientGlowText from "../Component/Typography/Heading"; // Make sure path is correct
+import GradientGlowText from "../Component/Typography/Heading"; 
 export default function OurAdvantages() {
   const advantages = useMemo(
     () => [
@@ -43,7 +43,7 @@ export default function OurAdvantages() {
   const leftColumn = [advantages[0], advantages[2]];
   const rightColumn = [advantages[1], advantages[3]];
   return (
-    <section className="bg-black text-white py-20 px-6 text-center">
+    <section id="OurAdvantages" className="bg-black text-white py-20 px-6 text-center">
       <GradientGlowText className="text-xl sm:text-2xl md:text-5xl lg:text-6xl font-black mb-6 tracking-widest">
         OUR ADVANTAGES
       </GradientGlowText>

@@ -33,8 +33,8 @@ export const Typography = ({
   };
 
   const variantClasses = {
-    h1: "text-[clamp(2.8rem,7vw,5.5rem)] font-medium leading-[1.15] font-sora tracking-tight",
-    h2: "text-[17px] font-medium leading-[1.5] font-sora tracking-wide",
+    h1: "text-[clamp(2.8rem,7vw,5.5rem)] font-medium leading-[1.15] font-sora sans-serif",
+    h2: "text-[17px] font-medium leading-[1.5] font-sora ",
     h3: "text-[15px] font-semibold leading-[1.4] font-sora tracking-widest uppercase",
     h4: "text-[48px] font-medium leading-[1.25] font-sora tracking-tight",
     h5: "text-[50px] font-medium leading-[1.2] font-sora tracking-tight",
