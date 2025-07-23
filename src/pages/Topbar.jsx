@@ -8,11 +8,11 @@ import { Typography } from "../Component/Typography/Typography.jsx";
 
 
 
-const TOPBAR_CONTAINER = "w-full flex justify-center px-6 sm:px-10 py-10 mt-0";
+const TOPBAR_CONTAINER = "w-full flex justify-center px-4 sm:px-6 lg:px-10 py-6 lg:py-10 mt-0";
 const TOPBAR_HEADER = "w-full flex justify-center";
 const TOPBAR_DIV = "topbar w-full max-w-7xl relative";
 const MAIN_NAV = "transition-all duration-300 rounded-2xl border shadow-2xl bg-[#13142d]/95 backdrop-blur-xl border-white/10 relative";
-const NAVBAR_INNER = "flex items-center justify-between px-6 py-4";
+const NAVBAR_INNER = "flex items-center justify-between px-4 sm:px-6 py-4";
 
 const TopBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -98,7 +98,7 @@ const TopBar = () => {
   // Close menu on window resize
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 1024) {
+      if (window.innerWidth > 768) {
         closeMobileMenu();
       }
     };
@@ -126,12 +126,12 @@ const TopBar = () => {
                 <Logo />
                 
                 {/* Desktop Navigation */}
-                <div className="hidden lg:flex items-center justify-center flex-1 px-8">
+                <div className="hidden md:flex items-center justify-center flex-1 px-4 lg:px-8">
                   <NavigationLinks items={navigationItems} onNavClick={handleNavClick} />
                 </div>
                 
                 {/* Desktop Social & CTA */}
-                <div className="hidden lg:flex items-center">
+                <div className="hidden md:flex items-center">
                   <SocialSection socialLinks={socialLinks} onCtaClick={handleCtaClick} />
                 </div>
                 
@@ -165,14 +165,14 @@ const Logo = React.memo(() => (
       alt="GTM Labs Logo" 
       height={50} 
       width={120}
-      className="h-[50px] w-auto object-contain transition-all duration-300 hover:scale-105"
+       className="h-[40px] sm:h-[50px] w-auto object-contain transition-all duration-300 hover:scale-105"
       priority
     />
   </div>
 ));
 
 const NavigationLinks = React.memo(({ items, onNavClick }) => (
-  <div className="flex items-center justify-center gap-8">
+  <div className="flex items-center justify-center gap-4 lg:gap-8 xl:gap-14">
     {items.map((item) => (
       <div
         key={item.id}
@@ -188,7 +188,7 @@ const NavigationLinks = React.memo(({ items, onNavClick }) => (
       >
         <Typography 
           variant="h3" 
-          className="font-medium text-white/90 text-sm tracking-wider font-sora whitespace-nowrap transition-all duration-300 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#30A0FF] group-hover:to-[#B145FF] group-hover:bg-clip-text"
+          className="font-medium text-white/90 text-xs lg:text-sm tracking-wider font-sora whitespace-nowrap transition-all duration-300 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-[#30A0FF] group-hover:to-[#B145FF] group-hover:bg-clip-text"
         >
           {item.label}
         </Typography>
@@ -199,7 +199,7 @@ const NavigationLinks = React.memo(({ items, onNavClick }) => (
 ));
 
 const SocialSection = React.memo(({ socialLinks, onCtaClick }) => (
-  <div className="flex items-center gap-4">
+  <div className="flex items-center gap-3">
     {socialLinks.map((link) => (
       <a
         key={link.id}
@@ -207,13 +207,14 @@ const SocialSection = React.memo(({ socialLinks, onCtaClick }) => (
         target="_blank"
         rel="noopener noreferrer"
         aria-label={link.alt}
-        className="opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300 p-2"
+        className="opacity-80 hover:opacity-100 
+        hover:scale-110 transition-all duration-300 p-1.5 lg:p-2"
       >
         {link.icon}
       </a>
     ))}
     <Button
-      className="flex justify-center items-center rounded-full bg-gradient-to-tr from-[#B145FF] to-[#30A0FF] cursor-pointer transition-all duration-300 border-none shadow-lg hover:-translate-y-1 hover:shadow-xl hover:from-[#C155FF] hover:to-[#40B0FF] ml-2 py-3 px-6 h-12 min-w-[150px] text-sm"
+    className="flex justify-center items-center rounded-full bg-gradient-to-tr from-[#B145FF] to-[#30A0FF] cursor-pointer transition-all duration-300 border-none shadow-lg hover:-translate-y-1 hover:shadow-xl hover:from-[#C155FF] hover:to-[#40B0FF] ml-2 py-2 px-4 lg:py-3 lg:px-6 h-10 lg:h-12 min-w-[120px] lg:min-w-[150px] text-xs lg:text-sm"
       onClick={onCtaClick}
       text={
         <Typography className="font-sora font-semibold text-black tracking-wide text-sm" variant="h2">
@@ -257,7 +258,7 @@ const MobileMenu = React.memo(({
   onCtaClick,
   onClose,
 }) => (
-  <div className={`lg:hidden fixed inset-0 flex items-start justify-center pt-16 px-4 transition-all duration-500 ease-in-out z-[70] ${
+   <div className={`md:hidden fixed inset-0 flex items-start justify-center pt-16 px-4 transition-all duration-500 ease-in-out z-[70] ${
     isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
   }`}>
     <div className={`bg-[#1a1b3a]/98 backdrop-blur-2xl rounded-2xl border border-white/20 shadow-2xl overflow-hidden w-full max-w-xs mx-auto max-h-[calc(100vh-8rem)] transition-all duration-500 ${
