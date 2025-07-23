@@ -97,7 +97,7 @@ export default function Footer() {
           <Image src={require('../Assets/Gtm.png')} alt="GTM Labs Logo" width={140} height={140} className="object-contain" />
 
           <Image src={require('../Assets/gtmlogonew.png')} alt="GTM Labs Logo" width={140} height={140} className="object-contain" />
-
+        </div>
         </div>
         {/* Quick Links */}
         <div className="flex flex-col items-start gap-2 min-w-[120px]">
