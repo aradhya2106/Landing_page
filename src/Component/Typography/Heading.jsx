@@ -1,13 +1,13 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef } from "react";
 
-const GradientGlowText = ({ 
-  children, 
-  className = "", 
+const GradientGlowText = ({
+  children,
+  className = "",
   circleSize = 100,
   gradientFrom = "from-blue-400",
-  gradientVia = "via-purple-500", 
+  gradientVia = "via-purple-500",
   gradientTo = "to-blue-400",
-  baseTextColor = "text-gray-600"
+  baseTextColor = "text-gray-600",
 }) => {
   const [mousePosition, setMousePosition] = useState({ x: -100, y: 50 });
   const [isHovered, setIsHovered] = useState(false);
@@ -28,7 +28,7 @@ const GradientGlowText = ({
   const gradientClasses = `bg-gradient-to-r ${gradientFrom} ${gradientVia} ${gradientTo}`;
 
   return (
-    <div 
+    <div
       ref={textRef}
       className="relative cursor-pointer inline-block"
       onMouseMove={handleMouseMove}
@@ -38,13 +38,13 @@ const GradientGlowText = ({
       <div className={`${className} ${baseTextColor} relative select-none`}>
         {children}
       </div>
-      
-      <div 
+
+      <div
         className={`absolute inset-0 ${className} ${gradientClasses} bg-clip-text text-transparent select-none transition-opacity duration-200`}
         style={{
           maskImage: `radial-gradient(circle ${circleSize}px at ${mousePosition.x}px ${mousePosition.y}px, white 0%, white 30%, transparent 60%)`,
           WebkitMaskImage: `radial-gradient(circle ${circleSize}px at ${mousePosition.x}px ${mousePosition.y}px, white 0%, white 30%, transparent 60%)`,
-          opacity: isHovered ? 1 : 0
+          opacity: isHovered ? 1 : 0,
         }}
       >
         {children}

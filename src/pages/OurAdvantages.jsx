@@ -5,7 +5,7 @@ import internet from "../Assets/internet.png";
 import Peoples from "../Assets/Peoples.png";
 import Rocket from "../Assets/Rocket.png";
 import Circle from "../Assets/Circle.png";
-
+import GradientGlowText from "../Component/Typography/Heading"; 
 export default function OurAdvantages() {
   const advantages = useMemo(
     () => [
@@ -40,34 +40,13 @@ export default function OurAdvantages() {
     ],
     []
   );
-
-  const leftColumn = useMemo(
-    () => [advantages[0], advantages[2]],
-    [advantages]
-  );
-  const rightColumn = useMemo(
-    () => [advantages[1], advantages[3]],
-    [advantages]
-  );
-
-  const titleChars = useMemo(
-    () =>
-      "OUR ADVANTAGES".split("").map((char, i) => (
-        <span
-          key={i}
-          className="text-[#373737] opacity-90 transition duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#B145FF] hover:to-[#30A0FF] hover:drop-shadow-[0_0_6px_rgba(177,69,255,0.8)]"
-        >
-          {char === " " ? "\u00A0" : char}
-        </span>
-      )),
-    []
-  );
-
+  const leftColumn = [advantages[0], advantages[2]];
+  const rightColumn = [advantages[1], advantages[3]];
   return (
     <section id="OurAdvantages" className="bg-black text-white py-20 px-6 text-center">
-      <h2 className="flex justify-center flex-wrap gap-1 text-xl sm:text-2xl md:text-5xl lg:text-6xl font-black mb-6 tracking-widest">
-        {titleChars}
-      </h2>
+      <GradientGlowText className="text-xl sm:text-2xl md:text-5xl lg:text-6xl font-black mb-6 tracking-widest">
+        OUR ADVANTAGES
+      </GradientGlowText>
       <h3 className="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-4">
         Not Just Another Agency,
         <br />
@@ -102,10 +81,12 @@ export default function OurAdvantages() {
           ))}
         </div>
       </div>
-      <button className="mt-12 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-semibold rounded-full transition-all duration-300 shadow-lg">
-        Turn Strategy Into Action
-      </button>
+      <a
+        href="https://calendly.com/gtmlabsxyz/consult" >
+        <button className="mt-12 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white font-semibold rounded-full transition-all duration-300 shadow-lg">
+          Turn Strategy Into Action
+        </button>
+      </a>
     </section>
   );
 }
-    

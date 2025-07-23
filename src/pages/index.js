@@ -38,6 +38,9 @@ export default function Home() {
       <OurAdvantages />
       <AboutSection />
       <Navigation />
+      <main id="ServiceSection">
+      <ServiceSection />
+    </main>
 
       <div id="Packages">
         <ServicePackages />
@@ -46,14 +49,9 @@ export default function Home() {
       <div id="smart-solutions">
         <SmartSolutions />
       </div>
-
       <PartnersAndPlatforms />
       <ClientTestimonials />
       <TeamSection />
-
-      <main>
-        <ServiceSection />
-      </main>
       <ContactUsSection/>
       <Footer />
       
