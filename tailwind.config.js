@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sora: ['Sora', 'sans-serif'],
+      },
       textShadow: {
         glow: '0 0 4px #ffffff, 0 0 8px #7f00ff, 0 0 12px #7f00ff',
       },
@@ -23,5 +26,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-textshadow')],
+  plugins: [
+    require('tailwindcss-textshadow'),
+  ],
 };

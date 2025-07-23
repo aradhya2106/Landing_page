@@ -35,7 +35,7 @@ const TopBar = () => {
     },
     {
       id: "linkedin",
-      href: "https://www.linkedin.com/company/gtmlabspage/posts/?feedView=all",
+      href: "https://www.linkedin.com/company/gtmlabspage/",
       icon: <LinkedInLogo />,
       alt: "LinkedIn",
     },
