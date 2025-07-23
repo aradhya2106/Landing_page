@@ -93,12 +93,11 @@ export default function Footer() {
       {/* Desktop/Tablet Layout */}
       <div className="hidden md:flex flex-row justify-between items-start gap-8 max-w-6xl mx-auto">
         {/* Logo */}
-        <div className="flex flex-col items-center md:items-start w-[140px] flex-shrink-0
+        <div className="flex flex-col items-center md:items-start w-[140px] flex-shrink-0">
           <Image src={require('../Assets/Gtm.png')} alt="GTM Labs Logo" width={140} height={140} className="object-contain" />
-
           <Image src={require('../Assets/gtmlogonew.png')} alt="GTM Labs Logo" width={140} height={140} className="object-contain" />
         </div>
-        </div>
+
         {/* Quick Links */}
         <div className="flex flex-col items-start gap-2 min-w-[120px]">
           <h3 className="font-bold text-lg mb-2">Quick Links</h3>
@@ -108,6 +107,7 @@ export default function Footer() {
             <li>Services</li>
           </ul>
         </div>
+        
         {/* Contact Info */}
         <div className="flex flex-col items-start gap-2 min-w-[180px]">
           <h3 className="font-bold text-lg mb-2">Contact Information</h3>
@@ -117,6 +117,7 @@ export default function Footer() {
             <div className="flex items-center gap-2"><span className="inline-block w-5 h-5"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></span><span className="text-base">Gurugram, Delhi NCR</span></div>
           </div>
         </div>
+        
         {/* Policies */}
         <div className="flex flex-col items-start gap-2 min-w-[150px]">
           <h3 className="font-bold text-lg mb-2">Policies</h3>
@@ -126,6 +127,7 @@ export default function Footer() {
             <li>Disclaimer</li>
           </ul>
         </div>
+        
         {/* Social Media */}
         <div className="flex flex-col items-start gap-2 min-w-[150px]">
           <h3 className="font-bold text-lg mb-2">Social Media</h3>
