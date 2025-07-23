@@ -45,6 +45,7 @@ export default function Footer() {
             <div className="flex items-center justify-center gap-2"><span className="inline-block w-5 h-5"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></span><span className="text-base">Gurugram, Delhi NCR</span></div>
           </div>
         </div>
+
         {/* Logo */}
         <div className="flex justify-center">
           <Image
@@ -59,6 +60,7 @@ export default function Footer() {
           <Image src={require('../Assets/gtmlogonew.png')} alt="GTM Labs Logo" width={120} height={120} className="object-contain" />
 
         </div>
+
         {/* Quick Links & Policies */}
         <div className="flex flex-row justify-between gap-8">
           <div className="flex flex-col items-center text-center gap-2 flex-1">
@@ -92,11 +94,13 @@ export default function Footer() {
       </div>
       {/* Desktop/Tablet Layout */}
       <div className="hidden md:flex flex-row justify-between items-start gap-8 max-w-6xl mx-auto">
+
         {/* Logo */}
         <div className="flex flex-col items-center md:items-start w-[140px] flex-shrink-0">
           <Image src={require('../Assets/Gtm.png')} alt="GTM Labs Logo" width={140} height={140} className="object-contain" />
           <Image src={require('../Assets/gtmlogonew.png')} alt="GTM Labs Logo" width={140} height={140} className="object-contain" />
         </div>
+
 
         {/* Quick Links */}
         <div className="flex flex-col items-start gap-2 min-w-[120px]">

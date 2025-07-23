@@ -129,12 +129,12 @@ const TopBar = () => {
                 <Logo />
                 
                 {/* Desktop Navigation */}
-                <div className="hidden md:flex items-center justify-center flex-1 px-4 lg:px-8">
+                <div className="hidden lg:flex items-center justify-center flex-1 px-4 xl:px-8">
                   <NavigationLinks items={navigationItems} onNavClick={handleNavClick} />
                 </div>
                 
                 {/* Desktop Social & CTA */}
-                <div className="hidden md:flex items-center">
+                <div className="hidden lg:flex items-center">
                   <SocialSection socialLinks={socialLinks} onCtaClick={handleCtaClick} />
                 </div>
                 
@@ -175,7 +175,7 @@ const Logo = React.memo(() => (
 ));
 
 const NavigationLinks = React.memo(({ items, onNavClick }) => (
-  <div className="flex items-center justify-center gap-4 lg:gap-8 xl:gap-14">
+  <div className="flex items-center justify-center gap-3 lg:gap-6 xl:gap-10">
     {items.map((item) => (
       <div
         key={item.id}

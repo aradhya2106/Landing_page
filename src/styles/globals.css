@@ -31,3 +31,24 @@ body {
   color: var(--foreground);
   font-family: 'Sora', sans-serif;
 }
+
+.animated-gradient-border {
+  border-width: 2px;
+  border-style: solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(90deg, #B145FF, #30A0FF);
+  transition: box-shadow 0.3s;
+}
+.animated-gradient-border:hover,
+.animated-gradient-border:active {
+  animation: gradient-border 2s linear infinite alternate;
+  box-shadow: 0 0 16px 0 rgba(144,97,255,0.5);
+}
+@keyframes gradient-border {
+  0% {
+    border-image-source: linear-gradient(90deg, #B145FF, #30A0FF);
+  }
+  100% {
+    border-image-source: linear-gradient(270deg, #B145FF, #30A0FF);
+  }
+}
