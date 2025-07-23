@@ -55,10 +55,8 @@ export default function Footer() {
             className="object-contain"
             style={{ width: 120, height: 120 }}
           />
-
-          <Image src={require('../Assets/gtmlogonew.png')} alt="GTM Labs Logo" width={120} height={120} className="object-contain" />
-
         </div>
+
         {/* Quick Links & Policies */}
         <div className="flex flex-row justify-between gap-8">
           <div className="flex flex-col items-center text-center gap-2 flex-1">
