@@ -49,12 +49,9 @@ export default function Home() {
       <div id="smart-solutions">
         <SmartSolutions />
       </div>
-
       <PartnersAndPlatforms />
       <ClientTestimonials />
       <TeamSection />
-
-     
       <ContactUsSection/>
       <Footer />
       
