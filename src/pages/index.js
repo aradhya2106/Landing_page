@@ -1,5 +1,4 @@
 import dynamic from "next/dynamic";
-
 import OurAdvantages from "./OurAdvantages";
 import AboutSection from "./AboutSection";
 import TeamSection from "./TeamSection";
@@ -58,3 +57,6 @@ export default function Home() {
     </div>
   );
 }
+
+
+
