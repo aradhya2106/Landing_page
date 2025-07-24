@@ -66,6 +66,7 @@ export default function Footer() {
               <li><a href="#HeroBanner" className="hover:underline">Home</a></li>
               <li><a href="#About" className="hover:underline">About</a></li>
               <li>Services</li>
+              <li><a href="/blog" className="hover:underline">Blogs</a></li>
             </ul>
           </div>
           <div className="flex flex-col items-center text-center gap-2 flex-1">
@@ -105,6 +106,7 @@ export default function Footer() {
             <li><a href="#HeroBanner" className="hover:underline">Home</a></li>
             <li><a href="#About" className="hover:underline">About</a></li>
             <li>Services</li>
+            <li><a href="/blog" className="hover:underline">Blogs</a></li>
           </ul>
         </div>
         

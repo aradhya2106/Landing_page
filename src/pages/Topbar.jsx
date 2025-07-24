@@ -5,7 +5,8 @@ import Image from "next/image";
 import gtmlogonew from "../Assets/gtmlogonew.png";
 import { Button } from "../Component/Button/Button.jsx";
 import { Typography } from "../Component/Typography/Typography.jsx";
-
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 
 const TOPBAR_CONTAINER = "w-full flex justify-center px-4 sm:px-6 lg:px-10 py-6 lg:py-10 mt-0";
@@ -16,6 +17,7 @@ const NAVBAR_INNER = "flex items-center justify-between px-4 sm:px-6 py-4";
 
 const TopBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const router = useRouter();
 
   const navigationItems = useMemo(
     () => [
@@ -23,7 +25,7 @@ const TopBar = () => {
       { id: "about", label: "ABOUT", href: "#About" },
       { id: "services", label: "SERVICES", href: "#ServiceSection " },
       { id: "packages", label: "PACKAGES", href: "#Packages" },
-      { id: "blogs", label: "BLOGS", href: "#Blogs" },
+      { id: "blogs", label: "BLOGS", href: "/blog" },
       { id: "contact", label: "CONTACT", href: "#Contact" },
     ],
     []
@@ -59,10 +61,12 @@ const TopBar = () => {
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
+      } else {
+        router.push(href);
       }
       closeMobileMenu();
     },
-    [closeMobileMenu]
+    [closeMobileMenu, router]
   );
 
   const handleCtaClick = useCallback(() => {
