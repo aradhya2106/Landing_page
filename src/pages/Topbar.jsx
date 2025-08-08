@@ -21,12 +21,12 @@ const TopBar = () => {
 
   const navigationItems = useMemo(
     () => [
-      { id: "home", label: "HOME", href: "#HeroBanner" },
-      { id: "about", label: "ABOUT", href: "#About" },
-      { id: "services", label: "SERVICES", href: "#ServiceSection " },
-      { id: "packages", label: "PACKAGES", href: "#Packages" },
+      { id: "home", label: "HOME", href: "/", scrollTo: "HeroBanner" },
+      { id: "about", label: "ABOUT", href: "/", scrollTo: "About" },
+      { id: "services", label: "SERVICES", href: "/", scrollTo: "ServiceSection" },
+      { id: "packages", label: "PACKAGES", href: "/", scrollTo: "Packages" },
       { id: "blogs", label: "BLOGS", href: "/blog" },
-      { id: "contact", label: "CONTACT", href: "#Contact" },
+      { id: "contact", label: "CONTACT", href: "/", scrollTo: "Contact" },
     ],
     []
   );
@@ -62,7 +62,13 @@ const TopBar = () => {
           element.scrollIntoView({ behavior: "smooth" });
         }
       } else {
-        router.push(href);
+        // Check if we're on a blog page and navigating to home
+        if (href === "/" && router.pathname.startsWith("/blog")) {
+          // Force navigation to home page
+          window.location.href = "/";
+        } else {
+          router.push(href);
+        }
       }
       closeMobileMenu();
     },
